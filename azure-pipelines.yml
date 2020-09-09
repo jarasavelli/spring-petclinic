@@ -15,3 +15,10 @@ jobs:
       TargetFolder: $(Build.ArtifactStagingDirectory)
   - upload: $(Build.ArtifactStagingDirectory)
     artifact: drop
+- deployment: VMDeploy
+  displayName: web
+  environment:
+    name:  <environment name>
+    resourceType: VirtualMachine
+    tags: web1
+  strategy:
