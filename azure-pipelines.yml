@@ -14,7 +14,7 @@ jobs:
       Contents: '**/target/*.?(war|jar)'
       TargetFolder: $(Build.ArtifactStagingDirectory)
   - upload: $(Build.ArtifactStagingDirectory)
-    artifact: drop2
+    artifact: drop
 - deployment: VMDeploy
   displayName: web
   dependsOn: Build
@@ -28,7 +28,7 @@ jobs:
         preDeploy:
           steps:
           - download: current
-            artifact: drop2
+            artifact: drop
           - script: echo initialize, cleanup, backup, install certs
         deploy:
           steps:
