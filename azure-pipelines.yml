@@ -22,3 +22,7 @@ jobs:
     resourceType: VirtualMachine
     tags: web1
   strategy:
+    runOnce:
+      deploy:
+          steps:
+          - script: echo my first deployment
