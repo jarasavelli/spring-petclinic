@@ -37,7 +37,7 @@ jobs:
               targetType: 'inline'
               script: |
                 # Modify deployment script based on the app type
-                echo "Starting deployment script run"
+                echo "Starting New deployment script run"
                 sudo java -jar '$(Pipeline.Workspace)/drop/target/*.jar'
         routeTraffic:
           steps:
