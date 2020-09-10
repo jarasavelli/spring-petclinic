@@ -38,8 +38,8 @@ jobs:
               script: |
                 # Modify deployment script based on the app type
                 echo "Starting New deployment script run"
-                sudo ls '$(Pipeline.Workspace)/drop/target/*.jar'
-                sudo java -jar '$(Pipeline.Workspace)/drop/target/*.jar'
+                sudo ls $(Pipeline.Workspace)/drop/target/*.jar
+                sudo java -jar $(Pipeline.Workspace)/drop/target/*.jar
         routeTraffic:
           steps:
           - script: echo routing traffic
