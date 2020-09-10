@@ -17,6 +17,7 @@ jobs:
     artifact: drop2
 - deployment: VMDeploy
   displayName: web
+  dependsOn: Build
   environment:
     name:  HelloWorld-LAMP_Env1
     resourceType: VirtualMachine
