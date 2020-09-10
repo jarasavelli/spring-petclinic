@@ -20,7 +20,7 @@ jobs:
   environment:
     name:  HelloWorld-LAMP_Env1
     resourceType: VirtualMachine
-    tags: web1
+    tags: web
   strategy:
     runOnce:
       deploy:
